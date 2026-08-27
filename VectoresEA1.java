@@ -5,7 +5,7 @@ public class VectoresEA1 {
         Scanner sc = new Scanner(System.in);
         int[] vector = new int[15];
 
-        // Vector ya creado y llenado (del commit 1)
+        // Commit 1: Crear y llenar vector con validación
         for (int i = 0; i < vector.length; i++) {
             int num;
             do {
@@ -25,7 +25,7 @@ public class VectoresEA1 {
         }
         System.out.println();
 
-        // Buscar un valor
+        // Commit 2: Búsqueda de valor + mayor/menor
         System.out.print("\nIngrese un número para buscar: ");
         int buscar = sc.nextInt();
         boolean encontrado = false;
@@ -45,6 +45,22 @@ public class VectoresEA1 {
         }
 
         System.out.println("Mayor: " + mayor + " | Menor: " + menor);
+
+        // Commit 3: Mostrar múltiplos del número seleccionado
+        if (encontrado) {
+            System.out.println("\nMúltiplos de " + buscar + " dentro del vector:");
+            boolean hayMultiplos = false;
+            for (int num : vector) {
+                if (num % buscar == 0 && num != buscar) {
+                    System.out.print(num + " ");
+                    hayMultiplos = true;
+                }
+            }
+            if (!hayMultiplos) {
+                System.out.println("No hay múltiplos de " + buscar + " en el vector.");
+            }
+            System.out.println();
+        }
 
         sc.close();
     }
