@@ -5,7 +5,7 @@ public class VectoresEA1 {
         Scanner sc = new Scanner(System.in);
         int[] vector = new int[15];
 
-        // 1. Crear y llenar vector con validación
+        // Vector ya creado y llenado (del commit 1)
         for (int i = 0; i < vector.length; i++) {
             int num;
             do {
@@ -24,6 +24,27 @@ public class VectoresEA1 {
             System.out.print(num + " ");
         }
         System.out.println();
+
+        // Buscar un valor
+        System.out.print("\nIngrese un número para buscar: ");
+        int buscar = sc.nextInt();
+        boolean encontrado = false;
+        int mayor = vector[0], menor = vector[0];
+
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] == buscar) {
+                System.out.println("Número encontrado en la posición: " + i);
+                encontrado = true;
+            }
+            if (vector[i] > mayor) mayor = vector[i];
+            if (vector[i] < menor) menor = vector[i];
+        }
+
+        if (!encontrado) {
+            System.out.println("El número no está en el vector.");
+        }
+
+        System.out.println("Mayor: " + mayor + " | Menor: " + menor);
 
         sc.close();
     }
