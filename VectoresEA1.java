@@ -62,6 +62,30 @@ public class VectoresEA1 {
             System.out.println();
         }
 
+        // Commit 4: Suma, promedio y nuevo vector
+        int suma = 0;
+        for (int num : vector) {
+            suma += num;
+        }
+        double promedio = (double) suma / vector.length;
+
+        System.out.println("Suma total: " + suma);
+        System.out.println("Promedio: " + promedio);
+
+        System.out.println("\nNúmeros mayores al promedio:");
+        int count = 0;
+        for (int num : vector) {
+            if (num > promedio) {
+                System.out.print(num + " ");
+                count++;
+            }
+        }
+        if (count == 0) {
+            System.out.println("No hay números mayores al promedio.");
+        } else {
+            System.out.println("\nCantidad: " + count);
+        }
+
         sc.close();
     }
 }
