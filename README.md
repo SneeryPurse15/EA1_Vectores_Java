@@ -17,7 +17,7 @@ Desarrollar un programa en Java que:
 ### Commit 2: Búsqueda y mayor/menor
 ![Commit 2](imagenes/commit_2.png)
 
-![Commit 2](imagenes/commit_2.2.png.png)
+![Commit 2](imagenes/commit_2.2.png)
 
 ### Commit 3: Múltiplos del número seleccionado
 ![Commit 3](imagenes/commit_3.png)
